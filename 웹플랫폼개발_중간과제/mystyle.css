@@ -1,0 +1,441 @@
+<style>
+
+.multiEffect {  /* 3개의 효과 동시 적용 */
+  color : black;
+  text-shadow : 2px 2px 2px white, 
+           0 0 50px white,
+           0 0 5px darkblue;
+}
+
+h4 {
+  
+  color: #000;
+  text-transform: uppercase;
+  font-weight: bold;
+ /* font-size: 3rem;*/
+  line-height: 0.75;
+  /*background: black;*/
+}
+
+h4 span:not(.light) {
+  opacity: 0.5;
+  animation: flashText .8s ease-out alternate infinite;
+   color:white;
+}
+
+h4 span.light {
+ 
+    &:before {
+    position: absolute;
+    left: 0;
+    top: -10%;
+    width: 100%;
+    height: 120%;
+    background: #fff;
+    filter: blur(15px);
+    content: "";
+    opacity: 0;
+    animation: flash .8s ease-out alternate infinite;
+
+  }
+}
+
+@keyframes flash{
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes flashText {
+  to {
+    opacity: 0.15;
+  }
+}
+body{
+  background: white;
+}
+
+
+#header{
+
+}
+#fixed{
+  position: fixed;
+  bottom:50px;
+  right:30px;
+  padding :0px;
+  
+}
+
+  #menu {
+        border:none;
+        border:0px;
+        margin:0px;
+        padding-top:20px;
+        font-family:'Georgia';
+        font-size:12px;
+        font-weight:600;
+        margin:auto;
+        background:black;
+    }
+    .menu{
+      background-color: black;
+
+    }
+    .menu ul{
+
+        list-style:none;
+        margin:0px;
+        margin-left: 400px;
+        margin-right: auto;
+        width: 1200px;
+        height: 1px;
+        text-align: center;
+       
+    }
+    .menu li{
+        float:left;
+        padding:0px 95px 30px 0px;
+      
+    }
+    .menu li a{
+        color:#444;
+        display:block;
+        font-weight:normal;
+        line-height:37px;
+        margin:0px;
+        width:140px;
+        text-align:center;
+        text-decoration:none;
+        height:26px;
+    }
+    .menu li a:hover{
+        
+        background-repeat:no-repeat;
+        color:white;
+        text-decoration:none;
+    }
+    .menu li ul{
+        display:none;
+        height:auto;
+        padding:0px;
+        margin:0px;
+        border:0px;
+        position:absolute;
+        z-index:100;
+        float:right;
+    }
+    .menu li:hover ul{
+        display:block;
+        color:red;
+    }
+    .menu li li {
+        float:center;
+        display:block;
+        margin:0px;
+        padding:0px;
+        background:none;
+        font-size:5px;
+    }
+  /*  .menu li:hover li a{
+        background:none;
+        color:#fff;
+    }*/
+   /* .menu li ul a{
+        color:#fff;
+        display:block;
+        font-size:7px;
+        font-style:normal;
+        margin:0px;
+        text-align:center;*/
+
+  margin-left: auto;
+  margin-right: auto;
+    }
+
+table { /* 이중 테두리 제거 */
+  border-collapse : collapse;
+  width: 80%;
+  height:100%;
+  margin-left:40px;
+  margin-right: 10px;
+  /*text-align: center;*/
+}
+td, th { /* 모든 셀에 적용 */
+  text-align : center;
+  padding : 3px;
+  height : 240px;
+  width : 360px;
+  background-size: cover;
+}
+
+thead, tfoot { /* <thead>의 모든 셀에 적용 */
+  background : black;
+  color : white;
+  opacity: 0.5;
+  
+}
+thead th{
+  height:10px;
+}
+tbody tr:nth-child(even) { /* 짝수 <tr>에 적용*/
+  background : aliceblue;
+}
+tbody td{ 
+    /*font-size: 50px;*/
+    /*font-weight: bold;*/
+    position: relative;
+    text-align: center;
+    /*opacity: 0.5;*/
+    vertical-align:middle;
+    z-index:1;
+    background: transparent;
+  text-transform: uppercase;
+ /* font-weight: 300;
+  font-style: normal;*/
+  font-family: Georgia;
+  font-size: 0.525rem;
+  letter-spacing: 0.3em;
+  /*color: rgba(223,190,106,0.7);*/
+  border-radius: 0;
+ /* padding: 18px 80px 20px;*/
+  transition: all 0.7s ease-out;
+  background: linear-gradient(270deg, rgba(223,190,106,0.8), rgba(146,111,52,0.8), rgba(34,34,34,0), rgba(34,34,34,0));
+  background-position: 1% 50%;
+  background-size: 300% 300%;
+  text-decoration: none;
+  margin: 0.325rem;
+  border: none;
+  border: 0px solid rgba(223,190,106,0.3);
+}
+tbody td:hover { 
+    /*font-size: 50px;*/
+    font-weight: bold;
+    text-align: center;
+   
+    color: #fff;
+  border: 0px solid rgba(223,190,106,0);
+  color: $white;
+  background-position: 99% 50%;
+   /* vertical-align:middle;
+    z-index:2;
+    position: absolute;*/
+   
+    
+}
+tbody td p:hover { 
+    /*font-size: 50px;*/
+    position: absolute;
+    font-weight: bold;
+    text-align: center;
+    opacity: 0.5;
+    vertical-align:middle;
+    z-index:2;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);                                                                   
+    font-size:5rem;
+    color: white;
+    z-index: 2;
+}
+
+audio{
+  float:right;
+  height: 15px;
+}
+
+#btn2 {
+  background: transparent;
+  text-transform: uppercase;
+ /* font-weight: 300;
+  font-style: normal;*/
+  font-family: Georgia;
+  font-size: 0.525rem;
+  letter-spacing: 0.3em;
+  /*color: rgba(223,190,106,0.7);*/
+  border-radius: 0;
+ /* padding: 18px 80px 20px;*/
+  transition: all 0.7s ease-out;
+  background: linear-gradient(270deg, rgba(223,190,106,0.8), rgba(146,111,52,0.8), rgba(34,34,34,0), rgba(34,34,34,0));
+  background-position: 1% 50%;
+  background-size: 300% 300%;
+  text-decoration: none;
+  margin: 0.325rem;
+  border: none;
+  border: 0px solid rgba(223,190,106,0.3);
+  text-align: center;
+}
+
+#btn2:hover {
+  color: #fff;
+  border: 0px solid rgba(223,190,106,0);
+  color: $white;
+  background-position: 99% 50%;
+}
+
+#container {
+  
+    -webkit-animation: fadein 2s; 
+   
+}
+@-webkit-keyframes fadein { 
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+</style>
+<script>
+  function alertEX() {
+  alert("SNS 안해용~");
+}
+</script>
+
+<script>
+  function alertthis() {
+  alert("This");
+}
+</script>
+
+
+
+  
+
+  <style>
+
+
+.slides {
+    padding: 0;
+    width: 100%;
+    height: 420px;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+}
+
+.slides * {
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+.slides input { display: none; }
+
+.slide-container { display: block; }
+
+.slide {
+    top: 0;
+    opacity: 0;
+    width: 100%;
+    height: 420px;
+    display: block;
+    position: absolute;
+
+    transform: scale(0);
+
+    transition: all .7s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+
+.nav label {
+    width: 200px;
+    height: 100%;
+    display: none;
+    position: absolute;
+
+      opacity: 0;
+    z-index: 9;
+    cursor: pointer;
+
+    transition: opacity .2s;
+
+    color: #FFF;
+    font-size: 156pt;
+    text-align: center;
+    line-height: 380px;
+    font-family: "Varela Round", sans-serif;
+    background-color: rgba(255, 255, 255, .3);
+    text-shadow: 0px 0px 15px rgb(119, 119, 119);
+}
+
+.slide:hover + .nav label { opacity: 0.5; }
+
+.nav label:hover { opacity: 1; }
+
+.nav .next { right: 0; }
+
+input:checked + .slide-container  .slide {
+    opacity: 1;
+
+    transform: scale(1);
+
+    transition: opacity 1s ease-in-out;
+}
+
+input:checked + .slide-container .nav label { display: block; }
+
+.nav-dots {
+    width: 100%;
+    bottom: 9px;
+    height: 11px;
+    display: block;
+    position: absolute;
+    text-align: center;
+}
+
+.nav-dots .nav-dot {
+    top: -5px;
+    width: 11px;
+    height: 11px;
+    margin: 0 4px;
+    position: relative;
+    border-radius: 100%;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.nav-dots .nav-dot:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+input#img-1:checked ~ .nav-dots label#img-dot-1,
+input#img-2:checked ~ .nav-dots label#img-dot-2,
+input#img-3:checked ~ .nav-dots label#img-dot-3,
+input#img-4:checked ~ .nav-dots label#img-dot-4,
+input#img-5:checked ~ .nav-dots label#img-dot-5,
+input#img-6:checked ~ .nav-dots label#img-dot-6 {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+  </style>
+      <style>
+      div{border:0px }
+      .back{
+        width:100%; height:120px;
+       
+        background-image:url('back.gif');
+      }
+    </style>
+    <style>
+  @keyframes textColorAnimation {
+    0% {  color : white;}
+    50% {  color : black;}
+    100% { color : white;}
+}
+span {
+  font-family : "Georgia";
+  animation-name: textColorAnimation;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+</style>

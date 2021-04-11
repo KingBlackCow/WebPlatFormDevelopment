@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>2015112629_웹플랫폼개발</title>
+ 
+<style>
+
+.multiEffect {  /* 3개의 효과 동시 적용 */
+  color : black;
+  text-shadow : 2px 2px 2px white, 
+           0 0 50px white,
+           0 0 5px darkblue;
+}
+h1{
+  color:white;
+}
+h2{
+  color:white;
+}
+h3{
+  color:white;
+}
+h4 {
+  color: #000;
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 0.75;
+ }
+
+
+h4 span:not(.light) {
+  opacity: 0.5;
+  animation: flashText .8s ease-out alternate infinite;
+   color:white;
+}
+
+h4 span.light {
+ 
+    &:before {
+    position: absolute;
+    left: 0;
+    top: -10%;
+    width: 100%;
+    height: 120%;
+    background: #fff;
+    filter: blur(15px);
+    content: "";
+    opacity: 0;
+    animation: flash .8s ease-out alternate infinite;
+
+  }
+}
+h5{
+  color:white;
+}
+h6{
+  color:white;
+}
+
+
+@keyframes flash{
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes flashText {
+  to {
+    opacity: 0.15;
+  }
+}
+body{
+  background: white;
+}
+
+
+#header{
+
+}
+#fixed{
+  position: fixed;
+  bottom:20px;
+  right:20px;
+  padding :5px;
+  
+}
+
+  #menu {
+        border:none;
+        border:0px;
+        margin:0px;
+        padding:0px;
+        font-family:'Georgia';
+        font-size:12px;
+        font-weight:600;
+        margin:auto;
+        background:black;
+    }
+    .menu{
+        padding-top:20px;   
+         }
+    .menu ul{
+
+        list-style:none;
+        margin:0px;
+        margin-left:0px;
+        margin-right: auto;
+
+        width: 100%;
+        height: 1px;
+        text-align: center;
+       
+    }
+    .menu li{
+        float:left;
+        padding:0px 95px 30px 0px;
+      
+    }
+    .menu li a{
+        color:white;
+        display:block;
+        font-weight:normal;
+       
+        margin:0px;
+        width:140px;
+        text-align:center;
+        text-decoration:none;
+        height:26px;
+    }
+    .menu li a:hover{
+        
+        background-repeat:no-repeat;
+        color:red;
+        text-decoration:none;
+    }
+    .menu li ul{
+        display:none;
+        height:auto;
+        padding:0px;
+        margin:0px;
+        border:0px;
+        position:absolute;
+        z-index:100;
+        float:right;
+    }
+    .menu li:hover ul{
+        display:block;
+        color:white;
+    }
+    .menu li li {
+        float:center;
+        display:block;
+        margin:0px;
+        padding:0px;
+        background:none;
+        font-size:10px;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+  
+audio{
+  float:right;
+  height: 15px;
+}
+
+#btn2 {
+  background: transparent;
+  text-transform: uppercase;
+  font-family: Georgia;
+  font-size: 0.525rem;
+  letter-spacing: 0.3em;
+  border-radius: 0;
+  transition: all 0.7s ease-out;
+  background: linear-gradient(270deg, rgba(223,190,106,0.8), rgba(146,111,52,0.8), rgba(34,34,34,0), rgba(34,34,34,0));
+  background-position: 1% 50%;
+  background-size: 300% 300%;
+  text-decoration: none;
+  margin: 0.325rem;
+  border: none;
+  border: 0px solid rgba(223,190,106,0.3);
+  text-align: center;
+}
+
+#btn2:hover {
+  color: #fff;
+  border: 0px solid rgba(223,190,106,0);
+  color: $white;
+  background-position: 99% 50%;
+}
+
+#container {
+  
+    -webkit-animation: fadein 2s; 
+   
+}
+@-webkit-keyframes fadein { 
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+</style>
+<script>
+  function alertEX() {
+  alert("SNS 안해용~");
+}
+</script>
+ <script type="text/javascript">
+   
+     function familyexplain(num)
+    { 
+      if(num==1)
+      {
+        document.getElementById("family_explain").innerHTML="father : He is strong";
+      }
+      else  if(num==2)
+      {
+        document.getElementById("family_explain").innerHTML="mother : She is too strong";
+      }
+      else
+      {
+        document.getElementById("family_explain").innerHTML="sister : Don't want to explain";
+      }
+
+      
+    } 
+  </script> 
+      <style>
+      div{border:0px }
+      .back{
+        width:100%;height:110px;
+       
+        background-image:url('back.gif');
+      }
+    </style>
+    <style>
+  @keyframes textColorAnimation {
+    0% {  color : white;}
+    50% {  color : black;}
+    100% { color : white;}
+}
+span {
+  font-family : "Georgia";
+  animation-name: textColorAnimation;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+</style>
+
+
+ 
+  <script>
+    function changeImg(src){
+      var img1=document.getElementById('tennis');
+      img1.src=src;
+    }
+  </script>
+  <script>
+  function alertthis() {
+  alert("This");
+}
+</script>
+
+ <script type="text/javascript">
+		var imgArray=new Array();
+		imgArray[0]="tennis1.jpg"; 
+		imgArray[1]="tennis3.jpg"; 
+		imgArray[2]="tennis4.jpg"; 
+		imgArray[3]="tennis2.jpg";
+		imgArray[4]="tennis5.jpg";
+		
+		function showImage(i)
+		{ 
+			var imgNum=i; 
+			var objImg=document.getElementById("tennis");
+		 	objImg.src=imgArray[imgNum];
+		 	i++;
+		 	if(i>=5){
+		 		i=0; 
+		 	}
+		 	setTimeout(showImage,1700,i);
+		 	
+		} 
+ </script> 
+ </head>
+
+<body style="background-color: black;">
+  <div id="fixed"><a href="#header"><img src="up.png" width="40" height="40" ></div>
+  <audio src="Jazz.mp3" controls autoplay loop style="padding:5px;"></audio>
+  <header id="header">
+    <div class="back" style="padding-bottom: 10px;">
+      <center>
+    <label>
+      <a href="Index.html">
+
+        <div class="multiEffect"><h1 style="font-family: Georgia; font-style:italic; display:inline-block;position:relative; left: 140px;top:30px;">LEE JO SUN </h1></div>
+             <div style="display:inline-block; position: relative;top:1px; "><h4><span class="light"style="font-family: Georgia;font-style:italic;">Think Different!</span></h4></div>
+       </a>
+    </label>
+    </center>
+       <a href="http://www.dongguk.edu/mbs/kr/index.jsp"/kr/index.jsp ><img src="title.png" width="100px" height="auto"style="display:inline-block; position: absolute;left:10px; top: 5px;"></a>
+    </div>
+   
+  </header>   
+  
+   
+  <nav id="menu">
+    <div class="menu">
+        <ul>
+          
+            <li><a href="MyInfo.html">MyInfo</a>
+            <ul>
+                <li><a href="MyHistory.html">MyHistory</a></li>
+                <li><a href="Myfamily.html">MyFamily</a></li>
+                
+                
+           </ul>
+            </li>
+
+            <li ><a href="StudyInfo.html">StudyInfo</a>
+            <ul>
+                <li><a href="#"onclick="alertthis()">Webplat form</a></li>
+                <li><a href="Gameprograming.html">Game programing</a></li>
+                <li><a href="android.html">Android</a></li>
+                <li><a href="vrar.html">VRAR</a></li>
+                <li><a href="tennis.html">Tennis</a></li>
+            </ul>
+            </li>
+
+            <li ><a href="HomepageInfo.html">HomepageInfo</a>
+            <ul>
+                <li><a href="Html.html">HTML</a></li>
+                <li><a href="Css.html">CSS</a></li>
+                <li><a href="Javascript.html">JAVASCRIPT</a></li>
+            </ul>
+            </li>
+         </ul>
+    </div>
+  </nav>
+
+
+<center>
+  
+  <body onload="showImage(0)">
+	  <img id="tennis" border="0" style="padding:50px; width:700px; height:500px"> 
+  </body>
+
+</center>
+
+
+
+  <footer>
+    <div class="back">
+
+      <div style="display: inline; padding-left: 10px; ">
+        <a href="https://eclass.dongguk.edu/index.jsp" target="_blank"><img src="eclass.png" width="120" height="auto"></a>
+      </div>
+
+      <center>      <div style="display: inline-block; position:relative;  ">
+          <h5 style="font-family: cursive; opacity: 0.5; font-color:white; color:white">Copyright (u) Dongguk multi. All right reserved.</h5>
+            
+        </div> 
+
+        <div style="display: inline-block;font-family: cursive;position: relative; left: 120px; opacity: 0.5; color:white">
+          <h5>email:sgs1159@naver.com T:010-8724-4774</h5>
+        </div>
+      </center>
+
+    
+   
+      <div style="display: inline-block; position:relative; left:1300px; bottom:12px;  cursor:pointer; color:white">
+      
+         <img src="facebook.jpg"  onclick="alertEX()"  width="30" height="30">
+         <img src="instagram.jpg" onclick="alertEX()"  width="30" height="30">
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
